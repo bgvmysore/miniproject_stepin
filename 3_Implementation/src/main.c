@@ -11,7 +11,7 @@ double unit_step(double t){
 }
 
 int main(){
-    FirstOrderLinearODE RL_ckt = FOLO_init(-1e4, 1e3, unit_step);
+    FirstOrderLinearODE RL_ckt = FOLODE_init(-1e4, 1e3, unit_step);
     
     printf("A: %lf \t B: %lf \nu(t): t=-1 %lf, t=0 %lf, t=1 %lf\n", 
     RL_ckt.m_A, RL_ckt.m_B,
