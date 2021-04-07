@@ -1,6 +1,6 @@
 #include "FirstOrderLinearODE.h"
 
-FirstOrderLinearODE FOLO_init(double _A, double _B, double (*_input_funct)(double _t) ){
+FirstOrderLinearODE FOLODE_init(double _A, double _B, double (*_input_funct)(double _t) ){
     FirstOrderLinearODE retvar;
     retvar.m_A = _A;
     retvar.m_B = _B;
