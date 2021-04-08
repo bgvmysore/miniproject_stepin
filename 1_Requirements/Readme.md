@@ -13,7 +13,7 @@ Quam lacus suspendisse faucibus interdum. Tortor posuere ac ut consequat semper 
 
 ## SWOT Analysis
     
-<img src="../6_ImagesAndVideos/Swot.svg" width="800px">
+<img src="../6_ImagesAndVideos/Swot.svg" width="700px">
 
 ## 4W's and 1H's
 
