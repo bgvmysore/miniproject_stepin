@@ -3,8 +3,7 @@
 ## Introduction
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Pharetra vel turpis nunc eget lorem dolor.Quam lacus suspendisse faucibus interdum. Tortor posuere ac ut consequat semper viverra nam libero. Ornare quam viverra orci sagittis eu volutpat odio facilisis. Neque aliquam vestibulum morbi blandit cursus risus at.
 
-$$ \frac{d}{dt} x(t) = A * x(t) + B * u(t) $$
-
+**Equation:**
 <img src="https://bit.ly/3mDlumo" align="center" border="0" alt=" \frac{d}{dt} x(t) = A * x(t) + B * u(t)" width="228" height="43" />
 
 ## Research
