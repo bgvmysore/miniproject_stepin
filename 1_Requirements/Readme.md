@@ -3,6 +3,10 @@
 ## Introduction
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Pharetra vel turpis nunc eget lorem dolor.Quam lacus suspendisse faucibus interdum. Tortor posuere ac ut consequat semper viverra nam libero. Ornare quam viverra orci sagittis eu volutpat odio facilisis. Neque aliquam vestibulum morbi blandit cursus risus at.
 
+$$ \frac{d}{dt} x(t) = A * x(t) + B * u(t) $$
+
+<img src="http://www.sciweavers.org/tex2img.php?eq=%20%5Cfrac%7Bd%7D%7Bdt%7D%20x%28t%29%20%3D%20A%20%2A%20x%28t%29%20%2B%20B%20%2A%20u%28t%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt=" \frac{d}{dt} x(t) = A * x(t) + B * u(t)" width="228" height="43" />
+
 ## Research
 
 Quam lacus suspendisse faucibus interdum. Tortor posuere ac ut consequat semper viverra nam libero. Ornare quam viverra orci sagittis eu volutpat odio facilisis. Neque aliquam vestibulum morbi blandit cursus risus at.
@@ -13,7 +17,7 @@ Quam lacus suspendisse faucibus interdum. Tortor posuere ac ut consequat semper 
 
 ## SWOT Analysis
     
-<img src="../6_ImagesAndVideos/Swot.svg" width="700px">
+<img src="../6_ImagesAndVideos/Swot.svg" width="700px"/>
 
 ## 4W's and 1H's
 
