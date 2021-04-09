@@ -12,7 +12,7 @@ int main(void){
 		OdeSolverObject solve_rl;
 		solverInit(&solve_rl, 0.00, 3e-3, 20e-6, 0.00);
 
-		solverSolveEulerModified(&solve_rl, &RL_ckt, FOLODE_callStateEquation);
+		solverSolveRungeKutta4(&solve_rl, &RL_ckt, FOLODE_callStateEquation);
 
 		gnuplot_ctrl *h1;
 		h1 = gnuplot_init();
