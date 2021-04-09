@@ -1,10 +1,10 @@
 CC = gcc
 CFLAGS = -Wall -g -std=c99
 
-INC = -Iinc
+INC = -Iinc -Ignuplot_i
 
 PROJECT = folodesolver
-SRC = $(wildcard src/*.c)
+SRC = $(wildcard src/*.c) gnuplot_i/gnuplot_i.c
 BIN = bin
 ifeq ($(OS),Windows_NT)
 		CL_BIN = del /q $(BIN)\*.*
