@@ -23,4 +23,10 @@ void solverFree(OdeSolverObject* _solObj);
 void solverSolveEulerForward(OdeSolverObject* _solObj, void const* _ODE_Obj, 
 double (*callStateEqofODE)(void const* _folode_obj, double _t, double _prevState));
 
+void solverSolveEulerModified(OdeSolverObject* _solObj, void const* _ODE_Obj, 
+double (*callStateEqofODE)(void const* _folode_obj, double _t, double _prevState));
+
+void solverSolveRungeKutta4(OdeSolverObject* _solObj, void const* _ODE_Obj, 
+double (*callStateEqofODE)(void const* _folode_obj, double _t, double _prevState));
+
 #endif // ODESOLVER_H

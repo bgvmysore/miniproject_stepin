@@ -12,10 +12,7 @@ int main(void){
 		OdeSolverObject solve_rl;
 		solverInit(&solve_rl, 0.00, 3e-3, 20e-6, 0.00);
 
-		solverSolveEulerForward(&solve_rl, &RL_ckt, FOLODE_callStateEquation);
-		for(int i=0; i<solve_rl.Npoints; i++){
-			printf("%lf\n", solve_rl.solArr[i]);
-		}
+		solverSolveEulerModified(&solve_rl, &RL_ckt, FOLODE_callStateEquation);
 
 		gnuplot_ctrl *h1;
 		h1 = gnuplot_init();
@@ -23,6 +20,8 @@ int main(void){
 		gnuplot_setstyle(h1, "lines");
 		gnuplot_plot_xy(h1, solve_rl.timeArr, solve_rl.solArr, solve_rl.Npoints, "RL CKT");
 		getchar();
+		gnuplot_close(h1);
+
 		solverFree(&solve_rl);
 		return 0;
 }

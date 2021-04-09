@@ -26,3 +26,20 @@ double (*callStateEqofODE)(void const* _folode_obj, double _t, double _prevState
         X0 = _solObj->solArr[i];
     }
 }
+
+void solverSolveEulerModified(OdeSolverObject* _solObj, void const* _ODE_Obj, 
+double (*callStateEqofODE)(void const* _folode_obj, double _t, double _prevState)){
+    double X0 = _solObj->initState;
+    for(int i=0; i<_solObj->Npoints; i++){
+        _solObj->timeArr[i] = _solObj->m_t0 + _solObj->m_dt * i;
+        double _tmp1 = X0 + _solObj->m_dt * callStateEqofODE(_ODE_Obj, _solObj->timeArr[i], X0);
+        _solObj->solArr[i] = X0 + (_solObj->m_dt/2) * (callStateEqofODE(_ODE_Obj, _solObj->timeArr[i], X0) + 
+        callStateEqofODE(_ODE_Obj, _solObj->timeArr[i] + _solObj->m_dt, _tmp1));
+        X0 = _solObj->solArr[i];
+    }
+}
+
+void solverSolveRungeKutta4(OdeSolverObject* _solObj, void const* _ODE_Obj, 
+double (*callStateEqofODE)(void const* _folode_obj, double _t, double _prevState)){
+    
+}
