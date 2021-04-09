@@ -9,7 +9,7 @@ int main(void){
 		FOLODE_init(&RL_ckt, -1e4, 1e3, unit, 1e-3);
 
 		OdeSolverObject solve_rl;
-		solverInit(&solve_rl, 0.00, 3e-3, 10e-6, 0.00);
+		solverInit(&solve_rl, 0.00, 3e-3, 20e-6, 0.00);
 
 		solverSolveEulerForward(&solve_rl, &RL_ckt, FOLODE_callStateEquation);
 		for(int i=0; i<solve_rl.Npoints; i++){
