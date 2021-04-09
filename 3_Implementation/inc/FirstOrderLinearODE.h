@@ -19,6 +19,6 @@ double FOLODE_getB(FirstOrderLinearODE const* _folode_obj);
 
 double FOLODE_callInputFunct(FirstOrderLinearODE const* _folode_obj, double _t);
 
-double FOLODE_callStateEquation(FirstOrderLinearODE const* _folode_obj, double _t, double _prevState);
+double FOLODE_callStateEquation(void const* _folode_obj, double _t, double _prevState);
 
 #endif //FOLO_H

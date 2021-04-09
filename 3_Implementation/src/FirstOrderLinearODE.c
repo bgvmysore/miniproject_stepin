@@ -21,7 +21,9 @@ double FOLODE_callInputFunct(FirstOrderLinearODE const* _folode_obj, double _t){
     return _folode_obj->m_input_funct(_t - _folode_obj->m_input_time_delay);
 }
 
-double FOLODE_callStateEquation(FirstOrderLinearODE const* _folode_obj, double _t, double _prevState){
+double FOLODE_callStateEquation(void const* _folode_obj, double _t, double _prevState){
     // xdot = A * x + B * u
-    return FOLODE_getA(_folode_obj)*_prevState + FOLODE_getB(_folode_obj) * FOLODE_callInputFunct(_folode_obj, _t);
+    return FOLODE_getA((FirstOrderLinearODE*)_folode_obj)*_prevState + 
+    FOLODE_getB((FirstOrderLinearODE*)_folode_obj) * 
+    FOLODE_callInputFunct((FirstOrderLinearODE*)_folode_obj, _t);
 }
