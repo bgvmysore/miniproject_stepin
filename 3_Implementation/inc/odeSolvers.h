@@ -20,7 +20,7 @@ void solverInit(OdeSolverObject* _solObj, double _t0, double _tend, double _dt, 
 
 void solverFree(OdeSolverObject* _solObj);
 
-void solverSolve(OdeSolverObject* _solObj, void const* _ODE_Obj, 
+void solverSolveEulerForward(OdeSolverObject* _solObj, void const* _ODE_Obj, 
 double (*callStateEqofODE)(void const* _folode_obj, double _t, double _prevState));
 
 #endif // ODESOLVER_H
