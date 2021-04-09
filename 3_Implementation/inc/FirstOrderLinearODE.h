@@ -1,12 +1,21 @@
 #ifndef FOLODE_H
 #define FOLODE_H
 
+#include<stdlib.h>
+#include<stdio.h>
+
 typedef struct _FOLODE{
     double m_A;
     double m_B;
     double (*m_input_funct)(double _t);
 }FirstOrderLinearODE;
 
-FirstOrderLinearODE FOLODE_init(double _A, double _B, double (*_input_funct)(double _t) );
+void FOLODE_init(FirstOrderLinearODE * _folode_obj, double _A, double _B, double (*_input_funct)(double _t) );
+
+double FOLODE_getA(FirstOrderLinearODE const* _folode_obj);
+
+double FOLODE_getB(FirstOrderLinearODE const* _folode_obj);
+
+double FOLODE_callInputFunct(FirstOrderLinearODE const* _folode_obj, double _t);
 
 #endif //FOLO_H
