@@ -2,6 +2,7 @@
 #include "FirstOrderLinearODE.h"
 #include "primitive_funct.h"
 #include "odeSolvers.h"
+#include "gnuplot_i.h"
 
 int main(void){
 
@@ -16,6 +17,12 @@ int main(void){
 			printf("%lf\n", solve_rl.solArr[i]);
 		}
 
+		gnuplot_ctrl *h1;
+		h1 = gnuplot_init();
+		gnuplot_resetplot(h1);
+		gnuplot_setstyle(h1, "lines");
+		gnuplot_plot_xy(h1, solve_rl.timeArr, solve_rl.solArr, solve_rl.Npoints, "RL CKT");
+		getchar();
 		solverFree(&solve_rl);
 		return 0;
 }
