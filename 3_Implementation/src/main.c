@@ -1,18 +1,21 @@
 #include <stdio.h>
 #include "FirstOrderLinearODE.h"
 #include "primitive_funct.h"
+#include "odeSolvers.h"
 
-int main(){
-		FirstOrderLinearODE* RL_ckt = malloc(sizeof(FirstOrderLinearODE)); 
-		FOLODE_init(RL_ckt, -1e4, 1e3, unit, 0.0);
+int main(void){
 
-		printf("A: %lf \t B: %lf \nu(t): t=-1 %lf, t=0 %lf, t=1 %lf\n", 
-		FOLODE_getA(RL_ckt), FOLODE_getB(RL_ckt),
-		FOLODE_callInputFunct(RL_ckt, -1.00),
-		FOLODE_callInputFunct(RL_ckt,  0.00),
-		FOLODE_callInputFunct(RL_ckt,  1.00)
-		);
+		FirstOrderLinearODE RL_ckt; 
+		FOLODE_init(&RL_ckt, -1e4, 1e3, unit, 1e-3);
 
-		free(RL_ckt);		    
+		OdeSolverObject solve_rl;
+		solverInit(&solve_rl, 0.00, 3e-3, 10e-6, 0.00);
+
+		solverSolveEulerForward(&solve_rl, &RL_ckt, FOLODE_callStateEquation);
+		for(int i=0; i<solve_rl.Npoints; i++){
+			printf("%lf\n", solve_rl.solArr[i]);
+		}
+
+		solverFree(&solve_rl);
 		return 0;
 }
