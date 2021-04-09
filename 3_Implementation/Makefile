@@ -7,7 +7,7 @@ PROJECT = folodesolver
 SRC = $(wildcard src/*.c)
 BIN = bin
 ifeq ($(OS),Windows_NT)
-		CL_BIN = del $(BIN)\*.*
+		CL_BIN = del /q $(BIN)\*.*
 		EXEC = $(BIN)\$(PROJECT).exe
 		EXEC_TEST = $(BIN)\test_$(PROJECT).exe
 else
