@@ -4,7 +4,7 @@
 #include "odeSolvers.h"
 #include "gnuplot_i.h"
 
-int main(void){
+int main(int argn, char** argv){
 
 		FirstOrderLinearODE RL_ckt; 
 		FOLODE_init(&RL_ckt, -1e4, 1e3, unit, 1e-3);
