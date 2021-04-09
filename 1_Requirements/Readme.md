@@ -61,11 +61,11 @@ Whenever an approximate solution for 1st order linear ODE is required or fast so
 
 ### Where:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Pharetra vel turpis nunc eget lorem dolor.
+This application can be used in Laboratories, Research and Development fields, College / Universities in order to evaluate systems and models which is of the above specified form.
 
 ### How:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Pharetra vel turpis nunc eget lorem dolor.
+The user defines his ODE in a file and that file is fed into the application then user is asked to select a numerical method to solve his ODE and he is given an option to save solution to a cvs file or diaplay plot of solution or both.
 
 # Detailed Requirements
 
@@ -79,5 +79,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 | ID | Description | Status |
 |-|-|-|
-| LR01 | 1. Example Description <br> 2. New line <br> 3. NewLine2 | Implemented |
+| LR01 | 1. Example Description <br/> 2. New line <br/> 3. NewLine2 | Implemented |
 
