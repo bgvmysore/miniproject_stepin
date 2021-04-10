@@ -28,7 +28,9 @@ Ordinary differential equations occur in many scientific disciplines, including 
 
 ### Costs
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+* My applications is designed to only solve first order ODE which is of Linear Time Invarient type but is can be extended to solve any ODE in future.
+
+* This application depends on gnuplot for handeling its plotting and graphing requirements.
 
 ### Features
 
@@ -73,7 +75,10 @@ The user defines his ODE in a file and that file is fed into the application the
 
 | ID | Description | Status |
 |-|-|-|
-| HR01 | Example Description | Implemented |
+| HR01 | Application should be work both in Windows and Linux | Implemented ✔ |
+| HR02 | Application should take input from user which details the problem | Implemented ✔ |
+| HR03 | Application should solve the ODE problem detailed by the user | ❌ |
+| HR04 | Finally, the solution should be presented as a plot or csv depending on user's choice| ❌ |
 
 ## Low Level Requirements
 
