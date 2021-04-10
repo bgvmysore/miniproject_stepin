@@ -25,6 +25,7 @@ funcPtr charToFunc(char _single_char){
         retvar = unit;
         break;
     }
+    return retvar;
 }
 
 void fileToFOLODEnSolObj(char *_path_to_data, FirstOrderLinearODE* _FOLODE_Obj, OdeSolverObject* _solObj){
