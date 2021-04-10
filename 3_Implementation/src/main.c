@@ -7,10 +7,10 @@
 int main(int argn, char** argv){
 
 		FirstOrderLinearODE RL_ckt; 
-		FOLODE_init(&RL_ckt, -1e4, 1e3, unit, 1e-3);
+		FOLODE_init(&RL_ckt, -1e4, 1e3, unit, 1e-3, 0.00);
 
 		OdeSolverObject solve_rl;
-		solverInit(&solve_rl, 0.00, 3e-3, 20e-6, 0.00);
+		solverInit(&solve_rl, 0.00, 3e-3, 20e-6, FOLODE_getInitState(&RL_ckt));
 
 		solverSolveRungeKutta4(&solve_rl, &RL_ckt, FOLODE_callStateEquation);
 
