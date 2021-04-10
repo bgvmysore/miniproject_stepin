@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "FirstOrderLinearODE.h"
-#include "primitive_funct.h"
+#include "BasicIpFunctions.h"
 #include "odeSolvers.h"
 #include "gnuplot_i.h"
 
