@@ -85,5 +85,5 @@ The user defines his ODE in a file and that file is fed into the application the
 | ID | Description | Status |
 |-|-|-|
 | LR01 | **Cross compatibility** <br/> The application must use open source tools which is  available on both windows and linux. The application should use: <br/> 1. **GCC** Compiler<br/>2. Build system using **make**<br/>3. **Gnuplot** for handling plots  | Implemented ✔ |
-| LR02 | 1. The user specifies his problem specifications of 1st Order Linear ODE in a text file which is of a certain format.<br/> 2. This text file is fed into the application which will parse the file to get problem specifications. | Implemented ✔ |
+| LR02 | 1. The user specifies his problem specifications of 1st Order Linear ODE in a text file which is of a certain format.<br/> 2. This text file is fed into the application which will be parsed to get problem specifications. | Implemented ✔ |
 
