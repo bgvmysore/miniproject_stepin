@@ -1,3 +1,4 @@
 .vscode/
 3_Implementation/bin/*
 3_Implementation/gnuplot_tmpdatafile_*
+3_Implementation/*.csv
