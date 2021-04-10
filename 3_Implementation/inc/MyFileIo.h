@@ -9,4 +9,6 @@
 
 void fileToFOLODEnSolObj(char *_path_to_data, FirstOrderLinearODE* _FOLODE_Obj, OdeSolverObject* _solObj);
 
+void saveSolToCsv(OdeSolverObject* _solObj);
+
 #endif // _MYFILEIO_H_

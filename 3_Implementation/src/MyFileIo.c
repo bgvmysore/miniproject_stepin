@@ -50,3 +50,11 @@ void fileToFOLODEnSolObj(char *_path_to_data, FirstOrderLinearODE* _FOLODE_Obj, 
     
     fclose(fp);
 }
+
+void saveSolToCsv(OdeSolverObject* _solObj){
+    FILE *solcsv;
+    solcsv = fopen("soln.csv", "w");
+    for(int i = 0; i < _solObj->Npoints; i++)
+        fprintf(solcsv, "%lf,%lf\n", _solObj->timeArr[i], _solObj->solArr[i]);
+    fclose(solcsv);
+}
