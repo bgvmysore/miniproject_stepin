@@ -7,4 +7,6 @@ double unit(double _t);
 
 double impulse(double _t);
 
+double ramp(double _t);
+
 #endif // _BASIC_IP_FUNCT_H_
