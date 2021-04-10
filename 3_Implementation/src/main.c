@@ -2,15 +2,15 @@
 #include "FirstOrderLinearODE.h"
 #include "BasicIpFunctions.h"
 #include "odeSolvers.h"
+#include "MyFileIo.h"
 #include "gnuplot_i.h"
 
 int main(int argn, char** argv){
 
-		FirstOrderLinearODE RL_ckt; 
-		FOLODE_init(&RL_ckt, -1e4, 1e3, unit, 1e-3, 0.00);
+		FirstOrderLinearODE RL_ckt;
+		OdeSolverObject solve_rl; 
 
-		OdeSolverObject solve_rl;
-		solverInit(&solve_rl, 0.00, 3e-3, 20e-6, FOLODE_getInitState(&RL_ckt));
+		fileToFOLODEnSolObj("inputData.txt", &RL_ckt, &solve_rl);
 
 		solverSolveRungeKutta4(&solve_rl, &RL_ckt, FOLODE_callStateEquation);
 
