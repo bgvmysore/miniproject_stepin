@@ -7,6 +7,6 @@
 #include "odeSolvers.h"
 #include "BasicIpFunctions.h"
 
-void fileToFOLODEnSolObj(FILE **_data_file, FirstOrderLinearODE* _FOLODE_Obj, OdeSolverObject* _solObj);
+void fileToFOLODEnSolObj(char *_path_to_data, FirstOrderLinearODE* _FOLODE_Obj, OdeSolverObject* _solObj);
 
 #endif // _MYFILEIO_H_
