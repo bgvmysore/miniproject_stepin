@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -g -std=c99
+CFLAGS = -Wall -g
 
 INC = -Iinc -Ignuplot_i
 
