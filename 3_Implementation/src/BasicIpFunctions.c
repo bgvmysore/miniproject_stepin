@@ -10,8 +10,13 @@ double unit(double _t){
 }
 
 double impulse(double _t){
-    double dt = 1e-7;
-    return ( unit( _t + dt ) - unit (_t ) / dt );
+    double dt = 1e-6;
+    if(_t == 0)
+        return (1/dt);
+    else if( _t > -dt && _t < dt)
+        return (1/(4 * dt));
+    else
+        return 0;  
 }
 
 double ramp(double _t){
