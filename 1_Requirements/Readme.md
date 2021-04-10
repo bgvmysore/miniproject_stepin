@@ -75,15 +75,19 @@ The user defines his ODE in a file and that file is fed into the application the
 
 | ID | Description | Status |
 |-|-|-|
-| HR01 | Application should be work both in Windows and Linux | Implemented ✔ |
-| HR02 | Application should take input from user which details the problem | Implemented ✔ |
-| HR03 | Application should solve the ODE problem detailed by the user | ❌ |
-| HR04 | Finally, the solution should be presented as a plot or csv depending on user's choice| ❌ |
+| HLR01 | Application should be work both in Windows and Linux | Implemented ✔ |
+| HLR02 | Application should take input from user which details the problem | Implemented ✔ |
+| HLR03 | Application should solve the ODE problem detailed by the user | ❌ |
+| HLR04 | Finally, the solution should be presented as a plot or csv depending on user's choice| ❌ |
 
 ## Low Level Requirements
 
 | ID | Description | Status |
 |-|-|-|
-| LR01 | **Cross compatibility** <br/> The application must use open source tools which is  available on both windows and linux. The application should use: <br/> 1. **GCC** Compiler<br/>2. Build system using **make**<br/>3. **Gnuplot** for handling plots  | Implemented ✔ |
-| LR02 | 1. The user specifies his problem specifications of 1st Order Linear ODE in a text file which is of a certain format.<br/> 2. This text file is fed into the application which will be parsed to get problem specifications. | Implemented ✔ |
+| LLR01 | **Cross compatibility** <br/> The application must use open source tools which is  available on both windows and linux. The application should use: <br/> 1. **GCC** Compiler<br/>2. Build system using **make**<br/>3. **Gnuplot** for handling plots  | Implemented ✔ |
+| LLR02 | 1. The user specifies his problem specifications of 1st Order Linear ODE in a text file which is of a certain format.<br/> 2. This text file is fed into the application which will be parsed to get problem specifications. | Implemented ✔ |
+| LLR03 | The user should be given the choice of the numerical method which is going to be used to solve his problem | ❌ |
+| LLR04 | Three numerical methods should be availabe for solving the ODE, namely:<br/>1. Euler Forward Method<br/>2. Modified Euler Forward Method <br/>3. Runge-Kutta 4 Method| Implemented ✔ |
+| LLR05 | The user should be given the choice for how the solution for his problem is presented ie. through csv or through plots or both | ❌ |
+| LLR06 | 1. Application should be capable of svaing the solution of ODE to a CSV file<br/>2. Application should be able to display a plot of the solution.<br/>| Implemented ✔ |
 
