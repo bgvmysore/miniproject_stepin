@@ -5,3 +5,6 @@
 ## Sequence Diagram
 
 ![sequence](../6_ImagesAndVideos/SequenceDiagram.svg)
+
+## Component Diagram
+![comp](../6_ImagesAndVideos/ComponentDiagram.svg)
