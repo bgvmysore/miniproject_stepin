@@ -1,3 +1,5 @@
+# High Level Design
+
 ## Usecase Diagram
 
 ![usecase](../6_ImagesAndVideos/UseCaseDiagram.svg)
