@@ -59,3 +59,16 @@ void saveSolToCsv(OdeSolverObject* _solObj){
         fprintf(solcsv, "%lf,%lf\n", _solObj->timeArr[i], _solObj->solArr[i]);
     fclose(solcsv);
 }
+
+void dispSolAsPlot(OdeSolverObject* _solObj){
+    gnuplot_ctrl* h1;
+    h1 = gnuplot_init();
+    gnuplot_resetplot(h1);
+    gnuplot_setstyle(h1, "lines");
+    gnuplot_plot_xy(h1, _solObj->timeArr, _solObj->solArr, _solObj->Npoints, "Solution");
+    
+    printf("\nPress any Key to Exit!\n");
+    getchar();
+    
+    gnuplot_close(h1);
+}
