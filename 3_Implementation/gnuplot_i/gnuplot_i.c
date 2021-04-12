@@ -135,14 +135,13 @@ gnuplot_ctrl * gnuplot_init(void)
 
 void gnuplot_close(gnuplot_ctrl * handle)
 {
-    int     i ;
 
     if (pclose(handle->gnucmd) == -1) {
         fprintf(stderr, "problem closing communication to gnuplot\n") ;
         return ;
     }
     if (handle->ntmp) {
-        for (i=0 ; i<handle->ntmp ; i++) {
+        for (int i=0 ; i<handle->ntmp ; i++) {
             remove(handle->tmp_filename_tbl[i]) ;
             free(handle->tmp_filename_tbl[i]);
             handle->tmp_filename_tbl[i] = NULL;
