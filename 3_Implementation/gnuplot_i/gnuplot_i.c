@@ -89,7 +89,6 @@ void gnuplot_plot_atmpfile(gnuplot_ctrl * handle, char const* tmp_filename, char
 gnuplot_ctrl * gnuplot_init(void)
 {
     gnuplot_ctrl *  handle ;
-    int i;
 
 #ifndef WIN32
     if (getenv("DISPLAY") == NULL) {
@@ -113,7 +112,7 @@ gnuplot_ctrl * gnuplot_init(void)
         return NULL ;
     }
 
-    for (i=0;i<GP_MAX_TMP_FILES; i++)
+    for (int i=0;i<GP_MAX_TMP_FILES; i++)
     {
         handle->tmp_filename_tbl[i] = NULL;
     }
