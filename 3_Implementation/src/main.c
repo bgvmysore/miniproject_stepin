@@ -14,8 +14,8 @@ int main(int argn, char** argv){
 	solverSolveRungeKutta4(&solve_rl, &RL_ckt, FOLODE_callStateEquation);
 	saveSolToCsv(&solve_rl);
 
-	saveSolToCsv(&RL_ckt);
-	dispSolAsPlot(&RL_ckt);
+	saveSolToCsv(&solve_rl);
+	dispSolAsPlot(&solve_rl);
 
 	solverFree(&solve_rl);
 	return 0;
