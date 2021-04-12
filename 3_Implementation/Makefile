@@ -2,6 +2,7 @@ CC = gcc
 CFLAGS = -Wall -g
 
 INC = -Iinc -Ignuplot_i
+LINK = -lm
 
 PROJECT = folodesolver
 SRC = $(wildcard src/*.c) gnuplot_i/gnuplot_i.c
@@ -18,7 +19,7 @@ endif
 
 
 $(EXEC): $(SRC)
-	$(CC) $(CFLAGS) $(INC) $^ -o $@
+	$(CC) $(CFLAGS) $(INC) $^ -o $@ $(LINK)
 
 run: $(EXEC)
 	./$(EXEC)
