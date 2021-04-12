@@ -14,7 +14,15 @@ typedef struct _FOLODE{
     double m_ip_freq;
 }FirstOrderLinearODE;
 
-void FOLODE_init(FirstOrderLinearODE * _folode_obj, double _A, double _B, double (*_input_funct)(double _t), double _ipTimeDelay, double _init_state, double _freq);
+void FOLODE_init(
+                    FirstOrderLinearODE * _folode_obj, 
+                    double _A, 
+                    double _B, 
+                    double (*_input_funct)(double _t), 
+                    double _ipTimeDelay, 
+                    double _init_state, 
+                    double _freq
+                );
 
 double FOLODE_callInputFunct(FirstOrderLinearODE const* _folode_obj, double _t);
 
