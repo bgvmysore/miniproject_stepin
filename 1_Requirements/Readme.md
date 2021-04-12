@@ -1,6 +1,7 @@
 # Requirements
 
 ## Introduction
+
 My Project is about solving 1st Order Linear Ordinary Differential Equations(ODE) using numerical methods like Euler Methods and Runge Kutta Methods and present a plot of the solution to the user or save the solution to a csv file. In this project I'm mainly considering linear 1st order ODE which is  time-invarient.
 
 Most of the physical systems can be represented or can be approximated to represent a linear time invarient (LTI) system of 1st order ODE (For example a simple RL circuit or a Mass-Damper System). The following shows the type of equation which is going to be solved by application.
@@ -21,44 +22,46 @@ Ordinary differential equations occur in many scientific disciplines, including 
 ## Costs and Features
 
 ### Costs
-  * My applications is designed to only solve first order ODE which is of Linear Time Invarient type but it can be extended to solve any ODE in future.
-  * This application depends on gnuplot for handling its plotting and graphing requirements.
+
+* My applications is designed to only solve first order ODE which is of Linear Time Invarient type but it can be extended to solve any ODE in future.
+* This application depends on gnuplot for handling its plotting and graphing requirements.
 
 ### Features
 
-  * Provide solution to 1st Order Linear ODE.
-  * Option for choosing various numercal methods like Euler Methods or Runge Kutta Methods to solve ODEs.
-  * Provide a plot of the solution using Gnu plot.
-  * Save the solution to csv file.
+* Provide solution to 1st Order Linear ODE.
+* Option for choosing various numercal methods like Euler Methods or Runge Kutta Methods to solve ODEs.
+* Provide a plot of the solution using Gnu plot.
+* Save the solution to csv file.
 
-## SWOT Analysis   
+## SWOT Analysis
+
 <img src="../6_ImagesAndVideos/Swot.svg" align="center" width="700px"/>
 
 ## 4W's and 1H's
 
-### Who:
+### Who
 
 This can be used by electical engineers, control system engineers, mechanical engineers or students or anybody who wants an approximate solution to 1st Order Linear ODE.
 
-### What:
+### What
 
 This is an application that takes a specific ODE with all its parameters, solution limits and step size, external input and returns a solution in the form of a csv file or plot or both. 
 
-### When:
+### When
 
 Whenever an approximate solution for 1st order linear ODE is required or fast solution is required or when the user wants to visualize the solution this application is quite useful.
 
-### Where:
+### Where
 
 This application can be used in Laboratories, Research and Development fields, College / Universities in order to evaluate systems and models which is of the above specified form.
 
-### How:
+### How
 
 The user defines his ODE in a file and that file is fed into the application then user is asked to select a numerical method to solve his ODE and he is given an option to save solution to a cvs file or diaplay plot of solution or both.
 
-# Detailed Requirements
+## Detailed Requirements
 
-## High Level Requirements
+### High Level Requirements
 
 | ID | Description | Status |
 |-|-|-|
@@ -67,7 +70,7 @@ The user defines his ODE in a file and that file is fed into the application the
 | HLR03 | Application should solve the ODE problem detailed by the user | ❌ |
 | HLR04 | Finally, the solution should be presented as a plot or csv depending on user's choice| ❌ |
 
-## Low Level Requirements
+### Low Level Requirements
 
 | ID | Description | Status |
 |-|-|-|
@@ -77,4 +80,3 @@ The user defines his ODE in a file and that file is fed into the application the
 | LLR04 | Three numerical methods should be availabe for solving the ODE, namely: <br/>1. Euler Forward Method<br/>2. Modified Euler Forward Method <br/>3. Runge-Kutta 4 Method| Implemented ✔ |
 | LLR05 | The user should be given the choice of how the solution for his problem is presented i.e. through csv or through plots or both | ❌ |
 | LLR06 | 1. Application should be capable of saving the solution of ODE to a CSV file<br/>2. Application should be able to display a plot of the solution<br/>| Implemented ✔ |
-
