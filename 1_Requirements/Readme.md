@@ -30,8 +30,8 @@ Ordinary differential equations occur in many scientific disciplines, including 
 
 *   Provide solution to 1st Order Linear ODE.
 *   Option for choosing various numercal methods like Euler Methods or Runge Kutta Methods to solve ODEs.
-*    Provide a plot of the solution using Gnu plot.
-*    Save the solution to csv file.
+*   Provide a plot of the solution using Gnu plot.
+*   Save the solution to csv file.
 
 ## SWOT Analysis
 
