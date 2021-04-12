@@ -35,17 +35,18 @@ void fileToFOLODEnSolObj(char *_path_to_data, FirstOrderLinearODE* _FOLODE_Obj, 
     char _f_ip = ' ';
     double _fts = 0.0;
     double _finitState = 0.0;
+    double _ffreq = 1;
     double _ft0 = 0.0, _ftend = 0.0, _fdt = 0.0;
     
-    fscanf(fp, "%lf\n%lf\n%c %lf\n%lf\n%lf %lf %lf",
+    fscanf(fp, "%lf\n%lf\n%c %lf %lf\n%lf\n%lf %lf %lf",
      &_fA,
      &_fB,
-     &_f_ip, &_fts,
+     &_f_ip, &_fts, &_ffreq,
      &_finitState,
      &_ft0, &_ftend, &_fdt
     );
     
-    FOLODE_init(_FOLODE_Obj, _fA, _fB, charToFunc(_f_ip), _fts, _finitState);
+    FOLODE_init(_FOLODE_Obj, _fA, _fB, charToFunc(_f_ip), _fts, _finitState, _ffreq);
     solverInit(_solObj, _ft0, _ftend, _fdt, _finitState);
     
     fclose(fp);
