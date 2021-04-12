@@ -23,15 +23,15 @@ Ordinary differential equations occur in many scientific disciplines, including 
 
 ### Costs
 
-* My applications is designed to only solve first order ODE which is of Linear Time Invarient type but it can be extended to solve any ODE in future.
-* This application depends on gnuplot for handling its plotting and graphing requirements.
+    * My applications is designed to only solve first order ODE which is of Linear Time Invarient type but it can be extended to solve any ODE in future.
+    * This application depends on gnuplot for handling its plotting and graphing requirements.
 
 ### Features
 
-* Provide solution to 1st Order Linear ODE.
-* Option for choosing various numercal methods like Euler Methods or Runge Kutta Methods to solve ODEs.
-* Provide a plot of the solution using Gnu plot.
-* Save the solution to csv file.
+  * Provide solution to 1st Order Linear ODE.
+  * Option for choosing various numercal methods like Euler Methods or Runge Kutta Methods to solve ODEs.
+*  Provide a plot of the solution using Gnu plot.
+*  Save the solution to csv file.
 
 ## SWOT Analysis
 
