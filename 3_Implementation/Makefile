@@ -6,15 +6,15 @@ LINK = -lm
 
 PROJECT = folodesolver
 SRC = $(wildcard src/*.c) gnuplot_i/gnuplot_i.c
-BIN = bin
+
 ifeq ($(OS),Windows_NT)
-		CL_BIN = del /q $(BIN)\*.*
-		EXEC = $(BIN)\$(PROJECT).exe
-		EXEC_TEST = $(BIN)\test_$(PROJECT).exe
+		RM = del /q
+		EXEC = $(PROJECT).exe
+		EXEC_TEST = test_$(PROJECT).exe
 else
-		CL_BIN = rm $(BIN)/*.*
-		EXEC = $(BIN)/$(PROJECT).out
-		EXEC_TEST = $(BIN)/test_$(PROJECT).out
+		RM = rm
+		EXEC = $(PROJECT).out
+		EXEC_TEST = test_$(PROJECT).out
 endif
 
 
@@ -25,4 +25,5 @@ run: $(EXEC)
 	./$(EXEC)
 
 clean:
-	$(CL_BIN)
+	$(RM) *.exe
+	$(RM) *.csv
