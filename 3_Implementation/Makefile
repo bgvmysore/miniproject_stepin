@@ -26,4 +26,3 @@ run: $(EXEC)
 
 clean:
 	$(RM) $(EXEC)
-	$(RM) *.csv
