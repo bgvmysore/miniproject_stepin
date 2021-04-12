@@ -17,3 +17,6 @@
 ## Structure Diagrams
 ### Class Diagram
 ![classdiag](../6_ImagesAndVideos/ClassDiagram.svg)
+## Behavior Diagrams
+### Activity Diagram
+![activityDiagram](../6_ImagesAndVideos/ActivityDiagram.svg)
