@@ -656,7 +656,7 @@ int gnuplot_write_multi_csv(
 
 char const * gnuplot_tmpfile(gnuplot_ctrl * handle)
 {
-    static char const * tmp_filename_template = "gnuplot_tmpdatafile_XXXXXX";
+    static char const * tmp_filename_template = "gnuplot_tmpdatafile_XXXXXX\0";
     char *              tmp_filename = NULL;
     int                 tmp_filelen = strlen(tmp_filename_template);
 
