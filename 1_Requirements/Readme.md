@@ -10,6 +10,7 @@ Most of the physical systems can be represented or can be approximated to repres
 <br/>
 <br/>
 In the above equation the *x(t)* is state variable of the system and *A* and *B* are constants and *u(t)* is the external input to the system.
+
 ## Research
 
 Numerical methods for ordinary differential equations are methods used to find numerical approximations to the solutions of ordinary differential equations (ODEs). Their use is also known as *numerical integration*, although this term can also refer to the computation of integrals.
@@ -20,15 +21,15 @@ Ordinary differential equations occur in many scientific disciplines, including 
 ## Costs and Features
 
 ### Costs
-* My applications is designed to only solve first order ODE which is of Linear Time Invarient type but it can be extended to solve any ODE in future.
-* This application depends on gnuplot for handling its plotting and graphing requirements.
+  * My applications is designed to only solve first order ODE which is of Linear Time Invarient type but it can be extended to solve any ODE in future.
+  * This application depends on gnuplot for handling its plotting and graphing requirements.
 
 ### Features
 
-* Provide solution to 1st Order Linear ODE.
-* Option for choosing various numercal methods like Euler Methods or Runge Kutta Methods to solve ODEs.
-* Provide a plot of the solution using Gnu plot.
-* Save the solution to csv file.
+  * Provide solution to 1st Order Linear ODE.
+  * Option for choosing various numercal methods like Euler Methods or Runge Kutta Methods to solve ODEs.
+  * Provide a plot of the solution using Gnu plot.
+  * Save the solution to csv file.
 
 ## SWOT Analysis   
 <img src="../6_ImagesAndVideos/Swot.svg" align="center" width="700px"/>
