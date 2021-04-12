@@ -25,5 +25,5 @@ run: $(EXEC)
 	./$(EXEC)
 
 clean:
-	$(RM) *.exe
+	$(RM) $(EXEC)
 	$(RM) *.csv
