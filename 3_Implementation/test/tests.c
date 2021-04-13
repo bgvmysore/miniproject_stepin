@@ -83,6 +83,65 @@ void test_solverFree(void){
     TEST_ASSERT_EQUAL(NULL, solobj.timeArr);
 }
 
+void test_solverSolveEulerForward(void){
+    FirstOrderLinearODE ode;
+    OdeSolverObject solver;
+
+    FOLODE_init(&ode, 1.1, 2.2, unit, 1e-3, 0.1, 1e3);
+    solverInit(&solver, 0.0, 10.00F, 0.5F, 0.1);
+    solverSolveEulerForward(&solver, &ode, FOLODE_callStateEquation);
+    TEST_ASSERT_EQUAL(0.0, solver.timeArr[0]);
+    TEST_ASSERT_EQUAL(0.0 + 3*0.5, solver.timeArr[3]);
+    TEST_ASSERT_EQUAL(9.5 , solver.timeArr[solver.Npoints-1]);
+    
+    double tmp = 0.1 + (0.5)*(1.1 * 0.1 + 2.2 * 0.0);
+    TEST_ASSERT_EQUAL(tmp, solver.solArr[0]);
+    
+    solverFree(&solver);
+}
+
+void test_solverSolveEulerModified(void){
+    FirstOrderLinearODE ode;
+    OdeSolverObject solver;
+
+    FOLODE_init(&ode, 1.1, 2.2, unit, 1e-3, 0.1, 1e3);
+    solverInit(&solver, 0.0, 10.00F, 0.5F, 0.1);
+    solverSolveEulerModified(&solver, &ode, FOLODE_callStateEquation);
+    TEST_ASSERT_EQUAL(0.0, solver.timeArr[0]);
+    TEST_ASSERT_EQUAL(0.0 + 3*0.5, solver.timeArr[3]);
+    TEST_ASSERT_EQUAL(9.5 , solver.timeArr[solver.Npoints-1]);
+
+    double tmp = 0.1 + 0.5 * (0.1 * 1.1 + 2.2 * 0.0);
+    tmp = 0.1 + (0.5/2) * ( ( 1.1 *(0.1 + tmp) + 2.2 * 0.0) + (1.1 * 0.1) ) ;
+    TEST_ASSERT_EQUAL(tmp, solver.solArr[0]);
+    
+    solverFree(&solver);
+}
+
+void test_solverSolveRungeKutta4(void){
+    FirstOrderLinearODE ode;
+    OdeSolverObject solver;
+
+    FOLODE_init(&ode, 1.1, 2.2, unit, 1e-3, 0.1, 1e3);
+    solverInit(&solver, 0.0, 10.00F, 0.5F, 0.1);
+    solverSolveRungeKutta4(&solver, &ode, FOLODE_callStateEquation);
+    TEST_ASSERT_EQUAL(0.0, solver.timeArr[0]);
+    TEST_ASSERT_EQUAL(0.0 + 3*0.5, solver.timeArr[3]);
+    TEST_ASSERT_EQUAL(9.5 , solver.timeArr[solver.Npoints-1]);
+
+    double k1, k2, k3, k4, tmp;
+    k1 = 0.5 * (1.1 * 0.1         + 2.2 *unit(0.0        - 1e-3));
+    k2 = 0.5 * (1.1 *(0.1 + k1/2) + 2.2 *unit(0.0 + 0.25 - 1e-3));
+    k3 = 0.5 * (1.1 *(0.1 + k2/2) + 2.2 *unit(0.0 + 0.25 - 1e-3));
+    k4 = 0.5 * (1.1 *(0.1 +   k3) + 2.2 *unit(0.0 + 0.50 - 1e-3));
+    tmp = 0.1 + (k1 + 2*k2 + 2*k3 + k4)/6;
+
+    TEST_ASSERT_EQUAL(tmp, solver.solArr[0]);
+    
+    solverFree(&solver);
+}
+
+
 int main(){
     UNITY_BEGIN();
     RUN_TEST(test_basicIpFunctions);
@@ -91,5 +150,8 @@ int main(){
     RUN_TEST(test_FOLODE_callStateEquation);
     RUN_TEST(test_solverInit);
     RUN_TEST(test_solverFree);
+    RUN_TEST(test_solverSolveEulerForward);
+    RUN_TEST(test_solverSolveEulerModified);
+    RUN_TEST(test_solverSolveRungeKutta4);
     return UNITY_END();
 }
