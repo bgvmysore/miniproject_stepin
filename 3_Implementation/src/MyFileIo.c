@@ -71,7 +71,7 @@ void dispSolAsPlot(OdeSolverObject* _solObj){
 #ifdef WIN32
     system("PAUSE");
 #else
-    system("read -n1 -r -p \"Press any key to continue...\" key");
+    system("read -r -p \"Press any key to continue...\" key");
 #endif
 
     gnuplot_close(h1);
