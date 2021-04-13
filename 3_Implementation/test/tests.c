@@ -59,7 +59,7 @@ void test_FOLODE_callStateEquation(void){
     TEST_ASSERT_EQUAL(1.1, FOLODE_callStateEquation(&obj, 1e-3, 0.0));
     TEST_ASSERT_EQUAL(2.2, FOLODE_callStateEquation(&obj, 10.0, 0.0));
 
-    TEST_ASSERT_EQUAL(11, FOLODE_callStateEquation(&obj, 0.0, 10));
+    TEST_ASSERT_EQUAL(111, FOLODE_callStateEquation(&obj, 0.0, 10));
     TEST_ASSERT_EQUAL(12.1,FOLODE_callStateEquation(&obj, 1e-3, 10.0));
 }
 
