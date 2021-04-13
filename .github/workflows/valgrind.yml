@@ -18,4 +18,4 @@ jobs:
     - name: Build from Make
       run: make -C 3_Implementation
     - name: valgrind 
-      run: valgrind --tool=memcheck ./3_Implementation/folodesolver.out < 7_Other/runtimeIp.txt
+      run: valgrind --tool=memcheck 3_Implementation/folodesolver.out < 7_Other/runtimeIp.txt
