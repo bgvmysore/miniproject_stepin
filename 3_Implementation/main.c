@@ -58,9 +58,34 @@ int main(int argn, char** argv){
 		break;
 	}
 	
-	saveSolToCsv(&solveSys);
-	//dispSolAsPlot(&solveSys);
+	short soldisp = 0;
+	printf("\n\n Output solution as:\n");
+	printf("   1. Output solution to CSV file\n   2. Output solution as plot \n   3. Both (1.) and (2.)\n");
+	printf("\nEnter your preferred output [default: 1]: ");
+	scanf("%hd", &soldisp);
 
+	switch(soldisp){
+		case 1 :
+			saveSolToCsv(&solveSys);
+			printf("\n Solution saved to soln.csv \n");
+			break;
+		case 2:
+			dispSolAsPlot(&solveSys);
+			break;
+		case 3:
+			saveSolToCsv(&solveSys);
+			printf("\n Solution saved to soln.csv \n");
+
+			dispSolAsPlot(&solveSys);
+			break;
+		default:
+			printf("\n[ ! ] Unknown Option entered...Using the default (1.) Output to CSV\n\n");
+			saveSolToCsv(&solveSys);
+			printf("\n Solution saved to soln.csv \n");
+			break;
+
+	}
 	solverFree(&solveSys);
+	printf("\n");
 	return 0;
 }

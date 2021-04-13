@@ -67,8 +67,12 @@ void dispSolAsPlot(OdeSolverObject* _solObj){
     gnuplot_setstyle(h1, "lines");
     gnuplot_plot_xy(h1, _solObj->timeArr, _solObj->solArr, _solObj->Npoints, "Solution");
     
-    printf("\nPress any Key to Exit!\n");
-    getchar();
-    
+    printf("\n");
+#ifdef WIN32
+    system("PAUSE");
+#else
+    system("read -n1 -r -p \"Press any key to continue...\" key");
+#endif
+
     gnuplot_close(h1);
 }
