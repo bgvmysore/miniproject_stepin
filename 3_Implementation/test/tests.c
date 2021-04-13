@@ -32,8 +32,42 @@ void test_basicIpFunctions(void){
     TEST_ASSERT_EQUAL(0.0, ramp(-1000));
 }
 
+void test_FOLODE_init(void){
+    FirstOrderLinearODE obj;
+    FOLODE_init(&obj, 1.1, 2.2, unit, 1e-3, 0.1, 1e3);
+    TEST_ASSERT_EQUAL(1.1, obj.m_A);
+    TEST_ASSERT_EQUAL(2.2, obj.m_B);
+    TEST_ASSERT_EQUAL(unit, obj.m_input_funct);
+    TEST_ASSERT_EQUAL(1e-3, obj.m_input_time_delay);
+    TEST_ASSERT_EQUAL(0.1, obj.m_init_state);
+    TEST_ASSERT_EQUAL(1e3, obj.m_ip_freq);
+}
+
+void test_FOLODE_callInputFunct(void){
+    FirstOrderLinearODE obj;
+    FOLODE_init(&obj, 1.1, 2.2, unit, 1e-3, 0.1, 1e3);
+    TEST_ASSERT_EQUAL(0.5, FOLODE_callInputFunct(&obj, 0.0));
+    TEST_ASSERT_EQUAL(0.0, FOLODE_callInputFunct(&obj, -12.12));
+    TEST_ASSERT_EQUAL(1.0, FOLODE_callInputFunct(&obj, 12.12));
+}
+
+void test_FOLODE_callStateEquation(void){
+    FirstOrderLinearODE obj;
+    FOLODE_init(&obj, 1.1, 2.2, unit, 1e-3, 0.1, 1e3);
+
+    TEST_ASSERT_EQUAL(0.0, FOLODE_callStateEquation(&obj, 0.0, 0.0));
+    TEST_ASSERT_EQUAL(1.1, FOLODE_callStateEquation(&obj, 1e-3, 0.0));
+    TEST_ASSERT_EQUAL(2.2, FOLODE_callStateEquation(&obj, 10.0, 0.0));
+
+    TEST_ASSERT_EQUAL(11, FOLODE_callStateEquation(&obj, 0.0, 10));
+    TEST_ASSERT_EQUAL(12.1,FOLODE_callStateEquation(&obj, 1e-3, 10.0));
+}
+
 int main(){
     UNITY_BEGIN();
     RUN_TEST(test_basicIpFunctions);
+    RUN_TEST(test_FOLODE_init);
+    RUN_TEST(test_FOLODE_callInputFunct);
+    RUN_TEST(test_FOLODE_callStateEquation);
     return UNITY_END();
 }
