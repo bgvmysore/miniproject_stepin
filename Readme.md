@@ -2,7 +2,7 @@
 
 | Codacy | Build | Cppcheck | Valgrind | Unity |
 |-|-|-|-|-|
-| [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0eeda194d63a4ac49703bf8a1344102c)](https://www.codacy.com/gh/bgvmysore/miniproject_stepin/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bgvmysore/miniproject_stepin&amp;utm_campaign=Badge_Grade) | [![C/C++ CI - Build Status](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/c-cpp.yml) | [![Cppcheck](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/cppcheck.yml) | NA | NA |
+| [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0eeda194d63a4ac49703bf8a1344102c)](https://www.codacy.com/gh/bgvmysore/miniproject_stepin/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bgvmysore/miniproject_stepin&amp;utm_campaign=Badge_Grade) | [![C/C++ CI - Build Status](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/c-cpp.yml) | [![Cppcheck](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/cppcheck.yml) | NA | [![Unit Tests](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/unity.yml/badge.svg)](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/unity.yml) |
 
 FOLODE Solver
 
