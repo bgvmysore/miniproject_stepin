@@ -10,6 +10,10 @@ void solverInit(OdeSolverObject* _solObj, double _t0, double _tend, double _dt, 
     _solObj->solArr = calloc(_solObj->Npoints, sizeof(double));
     _solObj->timeArr = calloc(_solObj->Npoints, sizeof(double));
     _solObj->initState = _initState;
+    if(_solObj->solArr == NULL || _solObj->timeArr == NULL){
+        fprintf(stderr, "\n[ERR]: Could Not allocate memory!\n");
+        exit(EXIT_FAILURE);
+    }
 }
 
 void solverFree(OdeSolverObject* _solObj){
