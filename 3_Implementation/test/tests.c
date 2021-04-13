@@ -63,11 +63,24 @@ void test_FOLODE_callStateEquation(void){
     TEST_ASSERT_EQUAL(12.1,FOLODE_callStateEquation(&obj, 1e-3, 10.0));
 }
 
+void test_solverInit(void){
+    OdeSolverObject solobj;
+    solverInit(&solobj, 0.0, 10.00, 0.5, 0.1);
+    TEST_ASSERT_EQUAL(0.0, solobj.m_t0);
+    TEST_ASSERT_EQUAL(10, solobj.m_tend);
+    TEST_ASSERT_EQUAL(0.5, solobj.m_dt);
+    TEST_ASSERT_EQUAL(20, solobj.Npoints);
+    TEST_ASSERT_EQUAL(0.1, solobj.initState);
+    TEST_ASSERT_TRUE(solobj.solArr != NULL && solobj.timeArr != NULL);
+    solverFree(&solobj);
+}
+
 int main(){
     UNITY_BEGIN();
     RUN_TEST(test_basicIpFunctions);
     RUN_TEST(test_FOLODE_init);
     RUN_TEST(test_FOLODE_callInputFunct);
     RUN_TEST(test_FOLODE_callStateEquation);
+    RUN_TEST(test_solverInit);
     return UNITY_END();
 }
