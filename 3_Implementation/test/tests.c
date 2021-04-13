@@ -10,7 +10,7 @@ void setUp(void){
 }
 
 void tearDown(void){
-    return ; 
+    return; 
 }
 
 void test_basicIpFunctions(void){
@@ -134,6 +134,7 @@ void test_solverSolveRungeKutta4(void){
     k2 = 0.5 * (1.1 *(0.1 + k1/2) + 2.2 *unit(0.0 + 0.25 - 1e-3));
     k3 = 0.5 * (1.1 *(0.1 + k2/2) + 2.2 *unit(0.0 + 0.25 - 1e-3));
     k4 = 0.5 * (1.1 *(0.1 +   k3) + 2.2 *unit(0.0 + 0.50 - 1e-3));
+
     tmp = 0.1 + (k1 + 2*k2 + 2*k3 + k4)/6;
 
     TEST_ASSERT_EQUAL(tmp, solver.solArr[0]);
@@ -141,9 +142,28 @@ void test_solverSolveRungeKutta4(void){
     solverFree(&solver);
 }
 
+void test_fileToFOLODEnSolObj(void){
+    FirstOrderLinearODE ode;
+    OdeSolverObject solver;
+    fileToFOLODEnSolObj("test/test_inputData.txt", &ode, &solver);
+    
+    TEST_ASSERT_EQUAL(1.1, ode.m_A);
+    TEST_ASSERT_EQUAL(2.1, ode.m_B);
+    TEST_ASSERT_EQUAL(unit, ode.m_input_funct);
+    TEST_ASSERT_EQUAL(0.1, ode.m_init_state);
+    TEST_ASSERT_EQUAL(0.2, ode.m_input_time_delay);
+    TEST_ASSERT_EQUAL(1e3, ode.m_ip_freq);
+    TEST_ASSERT_EQUAL(0.0, solver.m_t0);
+    TEST_ASSERT_EQUAL(10.0, solver.m_tend);
+    TEST_ASSERT_EQUAL(0.5, solver.m_dt);
+
+    solverFree(&solver);
+}
+
 
 int main(){
     UNITY_BEGIN();
+
     RUN_TEST(test_basicIpFunctions);
     RUN_TEST(test_FOLODE_init);
     RUN_TEST(test_FOLODE_callInputFunct);
@@ -153,5 +173,7 @@ int main(){
     RUN_TEST(test_solverSolveEulerForward);
     RUN_TEST(test_solverSolveEulerModified);
     RUN_TEST(test_solverSolveRungeKutta4);
+    RUN_TEST(test_fileToFOLODEnSolObj);
+    
     return UNITY_END();
 }
