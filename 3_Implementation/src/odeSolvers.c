@@ -19,6 +19,8 @@ void solverInit(OdeSolverObject* _solObj, double _t0, double _tend, double _dt, 
 void solverFree(OdeSolverObject* _solObj){
     free(_solObj->solArr);
     free(_solObj->timeArr);
+    _solObj->timeArr = NULL;
+    _solObj->solArr = NULL;
 }
 
 void solverSolveEulerForward(OdeSolverObject* _solObj, void const* _ODE_Obj, 

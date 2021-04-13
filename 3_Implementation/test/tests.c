@@ -75,6 +75,14 @@ void test_solverInit(void){
     solverFree(&solobj);
 }
 
+void test_solverFree(void){
+    OdeSolverObject solobj;
+    solverInit(&solobj, 0.0, 10.00, 0.5, 0.1);
+    solverFree(&solobj);
+    TEST_ASSERT_EQUAL(NULL, solobj.solArr);
+    TEST_ASSERT_EQUAL(NULL, solobj.timeArr);
+}
+
 int main(){
     UNITY_BEGIN();
     RUN_TEST(test_basicIpFunctions);
@@ -82,5 +90,6 @@ int main(){
     RUN_TEST(test_FOLODE_callInputFunct);
     RUN_TEST(test_FOLODE_callStateEquation);
     RUN_TEST(test_solverInit);
+    RUN_TEST(test_solverFree);
     return UNITY_END();
 }
