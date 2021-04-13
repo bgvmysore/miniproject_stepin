@@ -1,0 +1,21 @@
+name: Valgrind
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  cppcheck:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install valgrind
+      run: sudo apt -y install valgrind
+    - name: Build from Make
+      run: make -C 3_Implementation
+    - name: valgrind 
+      run: valgrind --tool=memcheck ./3_Implementation/folodesolver.out
