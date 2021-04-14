@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -g -std=c17
+CFLAGS = -Wall -g
 
 INC = -Iinc -Ignuplot_i -Iunity
 LINK = -lm
