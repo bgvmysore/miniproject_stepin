@@ -17,7 +17,5 @@ jobs:
       run: sudo apt -y install valgrind gnuplot
     - name: Build from Make
       run: make -C 3_Implementation
-    - name: cd to implementation
-      run: cd ./3_Implementation
     - name: valgrind test
-      run: pwd && valgrind --tool=memcheck ./folodesolver.out < ./../7_Other/runtimeIp.txt
+      run: cd ./3_Implementation && valgrind --tool=memcheck ./folodesolver.out < ./../7_Other/runtimeIp.txt
