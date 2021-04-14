@@ -9,7 +9,7 @@
  * @brief This struct is used to store all the data related to First Order Linear Differential Equation.
  * x'(t) = A * x(t)  + B * u(t - s) with initial value x0 at t0
  */
-typedef struct _FOLODE{
+typedef struct FirstOrderLinearODE{
     double m_A;
     double m_B;
     double m_input_time_delay;
