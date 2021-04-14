@@ -1,12 +1,11 @@
 # 1st Order Linear Ordinary Differential Equation Solver
 
+![_badge](https://img.shields.io/badge/Project-FOLODE%20Solver-green?style=for-the-badge&logo=C)
+
 | Codacy | Build | Cppcheck | Valgrind | Unity |
 |-|-|-|-|-|
 | [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0eeda194d63a4ac49703bf8a1344102c)](https://www.codacy.com/gh/bgvmysore/miniproject_stepin/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bgvmysore/miniproject_stepin&amp;utm_campaign=Badge_Grade) | [![C/C++ CI - Build Status](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/c-cpp.yml) | [![Cppcheck](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/cppcheck.yml) | [![Valgrind](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/valgrind.yml/badge.svg)](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/valgrind.yml) | [![Unit Tests](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/unity.yml/badge.svg)](https://github.com/bgvmysore/miniproject_stepin/actions/workflows/unity.yml) |
 
-FOLODE Solver
-
-![_badge](https://img.shields.io/badge/Project-FOLODE%20Solver-green?style=for-the-badge&logo=C)
 
 ## Folder Structure
 
@@ -18,3 +17,8 @@ Folder             | Description
 `4_Test_plan`      | Documents with test plans and procedures
 `6_ImagesAndVideos`| All images and videos related to project
 `7_Other`          | Other documents related to project
+
+## External Libraries Used
+
+*   This project utilizes [gnuplot_i](http://ndevilla.free.fr/gnuplot/) library to interface with **gnuplot**
+*   [Unity](https://github.com/ThrowTheSwitch/Unity) from Throw The Switch as unit test framework
