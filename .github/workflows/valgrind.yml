@@ -20,4 +20,4 @@ jobs:
     - name: cd to implementation
       run: cd ./3_Implementation
     - name: valgrind test
-      run: valgrind --tool=memcheck ./folodesolver.out < ../7_Other/runtimeIp.txt
+      run: pwd && valgrind --tool=memcheck ./folodesolver.out < ./../7_Other/runtimeIp.txt
