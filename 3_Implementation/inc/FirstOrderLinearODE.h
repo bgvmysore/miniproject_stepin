@@ -41,14 +41,24 @@ void FOLODE_init(
                 );
 
 /**
- * @brief 
- * 
- * @param _folode_obj 
- * @param _t 
- * @return double 
+ * @brief Call input function of the ODE Equation.
+ * ODE : x'(t) = A * x(t)  + B * u(t - s) with initial value x0 at t0
+ * call u(t - s) at given t
+ * @param _folode_obj (FirstOrderLinearODE *) pointer to first order linear ODE object
+ * @param _t (double) value of input variable (usually time)
+ * @return double value of input function
  */
 double FOLODE_callInputFunct(FirstOrderLinearODE const* _folode_obj, double _t);
 
+/**
+ * @brief This function returns the value of x'(t) at t in the ODE eqation.
+ * ie x'(t) = A * x(t_prev) + B * u(t - s) at t
+ * 
+ * @param _folode_obj (FirstOrderLinearODE *) pointer to first order linear ODE object
+ * @param _t (double) value of independent variable of ODE (usually time)
+ * @param _prevState the value of state variable x(t) at privious t ie., t = t-dt
+ * @return double value of x'(t) at given t
+ */
 double FOLODE_callStateEquation(void const* _folode_obj, double _t, double _prevState);
 
 #endif //FOLO_H
