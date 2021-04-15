@@ -32,6 +32,12 @@ Folder             | Description
 *   This project utilizes [gnuplot_i](http://ndevilla.free.fr/gnuplot/) library to interface with **gnuplot**
 *   [Unity](https://github.com/ThrowTheSwitch/Unity) from Throw The Switch as unit test framework
 
+## Project Dependencies
+
+1. GCC
+2. Make
+3. Gnuplot
+
 ## Challenges Faced and How Was It Overcome
 
 1. Github actions, github badges all these things seemed difficult at first but then I slowly learnt about these things with help of study materials uploaded at futureskill platform and overcame the difficulties faced.
