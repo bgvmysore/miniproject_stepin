@@ -1,6 +1,6 @@
 # 1st Order Linear Ordinary Differential Equation Solver
 
-![_badge](https://img.shields.io/badge/Project-FOLODE%20Solver-green?style=for-the-badge&logo=C)
+![_badge](https://img.shields.io/badge/Project-FOLODE%20Solver-blue?style=for-the-badge&logo=C)
 
 This application takes in a text file detailing 1st order ODE of linear time invarient system and solves it using Euler Forward Method or Modified Euler Forward Method or Runge-Kutta 4 Method. The solution then can be save to a CSV file or plot of the solution can be obtained.
 
