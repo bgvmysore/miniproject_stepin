@@ -31,7 +31,7 @@ clean:
 	$(RM) $(EXEC)
 
 $(EXEC_TEST): $(UNITY_SRC) $(SRC) test/tests.c
-	$(CC) $(CFLAGS) $(INC) $^ -o $@ $(LINK)
+	$(CC) $(CFLAGS) $(INC) $^ -o $@ $(LINK) -D UNITTEST
 
 runtests: $(EXEC_TEST)
 	./$(EXEC_TEST)

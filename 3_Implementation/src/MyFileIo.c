@@ -52,27 +52,39 @@ void fileToFOLODEnSolObj(char *_path_to_data, FirstOrderLinearODE* _FOLODE_Obj, 
     fclose(fp);
 }
 
-void saveSolToCsv(OdeSolverObject* _solObj){
+_Bool saveSolToCsv(OdeSolverObject* _solObj){
     FILE *solcsv;
     solcsv = fopen("soln.csv", "w");
+    if(solcsv == NULL){
+        return 0;
+    }
     for(int i = 0; i < _solObj->Npoints; i++)
         fprintf(solcsv, "%lf,%lf\n", _solObj->timeArr[i], _solObj->solArr[i]);
     fclose(solcsv);
+    return 1;
 }
 
-void dispSolAsPlot(OdeSolverObject* _solObj){
+_Bool dispSolAsPlot(OdeSolverObject* _solObj){
     gnuplot_ctrl* h1;
+    if( h1 == NULL){
+        return 0;
+    }
     h1 = gnuplot_init();
     gnuplot_resetplot(h1);
     gnuplot_setstyle(h1, "lines");
     gnuplot_plot_xy(h1, _solObj->timeArr, _solObj->solArr, _solObj->Npoints, "Solution");
     
     printf("\n");
-#ifdef WIN32
-    system("PAUSE");
-#else
-    system("read -r -p \"Press any key to continue...\" key");
+
+#ifndef UNITTEST
+    #ifdef WIN32
+        system("PAUSE");
+    #else
+        system("read -r -p \"Press any key to continue...\" key");
+    #endif
 #endif
 
     gnuplot_close(h1);
+    return 1;
+
 }

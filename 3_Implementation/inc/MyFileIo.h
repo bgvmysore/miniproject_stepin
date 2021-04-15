@@ -32,13 +32,13 @@ void fileToFOLODEnSolObj(char *_path_to_data, FirstOrderLinearODE* _FOLODE_Obj,
  * 
  * @param _solObj (OdeSolverObject *) pointer Ode solver object
  */
-void saveSolToCsv(OdeSolverObject* _solObj);
+_Bool saveSolToCsv(OdeSolverObject* _solObj);
 
 /**
  * @brief Display the solution as plot using gnuplot
  * 
  * @param _solObj (OdeSolverObject *) pointer Ode solver object
  */
-void dispSolAsPlot(OdeSolverObject* _solObj);
+_Bool dispSolAsPlot(OdeSolverObject* _solObj);
 
 #endif // _MYFILEIO_H_

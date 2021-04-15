@@ -160,6 +160,16 @@ void test_fileToFOLODEnSolObj(void){
     solverFree(&solver);
 }
 
+void test_outputsolmethods(void){
+    FirstOrderLinearODE ode;
+    OdeSolverObject solver;
+
+    FOLODE_init(&ode, 1.1, 2.2, unit, 1e-3, 0.1, 1e3);
+    solverInit(&solver, 0.0, 10.00F, 0.5F, 0.1);
+    TEST_ASSERT_EQUAL(1, saveSolToCsv(&solver));
+    TEST_ASSERT_EQUAL(1, dispSolAsPlot(&solver));
+    solverFree(&solver);
+}
 
 int main(){
     UNITY_BEGIN();
@@ -174,6 +184,7 @@ int main(){
     RUN_TEST(test_solverSolveEulerModified);
     RUN_TEST(test_solverSolveRungeKutta4);
     RUN_TEST(test_fileToFOLODEnSolObj);
+    RUN_TEST(test_outputsolmethods);
     
     return UNITY_END();
 }
