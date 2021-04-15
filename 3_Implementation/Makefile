@@ -35,3 +35,11 @@ $(EXEC_TEST): $(UNITY_SRC) $(SRC) test/tests.c
 
 runtests: $(EXEC_TEST)
 	./$(EXEC_TEST)
+
+cleantest:
+	cd test && $(RM) *.exe && cd ..
+
+cleansol:
+	$(RM) soln.csv
+
+cleanall: clean cleantest cleansol
