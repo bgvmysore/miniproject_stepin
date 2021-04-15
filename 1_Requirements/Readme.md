@@ -67,8 +67,8 @@ The user defines his ODE in a file and that file is fed into the application the
 |-|-|-|
 | HLR01 | Application should work both in Windows and Linux | Implemented ✔ |
 | HLR02 | Application should take input from user which details the problem | Implemented ✔ |
-| HLR03 | Application should solve the ODE problem detailed by the user | ❌ |
-| HLR04 | Finally, the solution should be presented as a plot or csv depending on user's choice| ❌ |
+| HLR03 | Application should solve the ODE problem detailed by the user | Implemented ✔ |
+| HLR04 | Finally, the solution should be presented as a plot or csv depending on user's choice| Implemented ✔ |
 
 ### Low Level Requirements
 
@@ -76,7 +76,7 @@ The user defines his ODE in a file and that file is fed into the application the
 |-|-|-|
 | LLR01 | **Cross compatibility** <br/> The application must use open source tools which is  available on both windows and linux. The application should use: <br/> 1. **GCC** Compiler<br/>2. Build system using **make**<br/>3. **Gnuplot** for handling plots  | Implemented ✔ |
 | LLR02 | 1. The user specifies his problem specifications of 1st Order Linear ODE in a text file which is of a certain format<br/> 2. This text file is fed into the application which will be parsed to get problem specifications | Implemented ✔ |
-| LLR03 | The user should be given the choice of the numerical method which is going to be used to solve his problem | ❌ |
+| LLR03 | The user should be given the choice of the numerical method which is going to be used to solve his problem | Implemented ✔ |
 | LLR04 | Three numerical methods should be availabe for solving the ODE, namely: <br/>1. Euler Forward Method<br/>2. Modified Euler Forward Method <br/>3. Runge-Kutta 4 Method| Implemented ✔ |
-| LLR05 | The user should be given the choice of how the solution for his problem is presented i.e. through csv or through plots or both | ❌ |
+| LLR05 | The user should be given the choice of how the solution for his problem is presented i.e. through csv or through plots or both | Implemented ✔ |
 | LLR06 | 1. Application should be capable of saving the solution of ODE to a CSV file<br/>2. Application should be able to display a plot of the solution<br/>| Implemented ✔ |
