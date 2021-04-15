@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install dependencies
-      run: sudo apt -y gnuplot
+      run: sudo apt -y install gnuplot
     - name: make
       run: make -C 3_Implementation/ runtests
