@@ -65,11 +65,10 @@ _Bool saveSolToCsv(OdeSolverObject* _solObj){
 }
 
 _Bool dispSolAsPlot(OdeSolverObject* _solObj){
-    gnuplot_ctrl* h1;
+    gnuplot_ctrl* h1 = gnuplot_init();
     if( h1 == NULL){
         return 0;
     }
-    h1 = gnuplot_init();
     gnuplot_resetplot(h1);
     gnuplot_setstyle(h1, "lines");
     gnuplot_plot_xy(h1, _solObj->timeArr, _solObj->solArr, _solObj->Npoints, "Solution");
