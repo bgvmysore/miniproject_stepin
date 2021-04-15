@@ -17,7 +17,31 @@ Folder             | Description
 `6_ImagesAndVideos`| All images and videos related to project
 `7_Other`          | Other documents related to project
 
+## Contributors List and Summary
+
+|SF No.   |  Name     |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass|
+|-|-|-|-|-|-|-|
+|`258009` | Bhargav R | Main application and features detailed in requirements | None | - | 11 | 11 |
+
 ## External Libraries Used
 
 *   This project utilizes [gnuplot_i](http://ndevilla.free.fr/gnuplot/) library to interface with **gnuplot**
 *   [Unity](https://github.com/ThrowTheSwitch/Unity) from Throw The Switch as unit test framework
+
+## Challenges Faced and How Was It Overcome
+
+1. Github actions, github badges all these things seemed difficult at first but then I slowly learnt about these things with help of study materials uploaded at futureskill platform and overcame the difficulties faced.
+
+2. Time management became a issue at first then I planned my work using github's project feature to list out the tasks and followed them accordingly
+
+3. I had to use a different computer during the final week as my computer wouldn't work. Github was very useful as I carried out work from another machine until my PC was fixed.
+
+## Learning Resources
+
+1. [markdownBasics](https://guides.github.com/features/mastering-markdown/)
+
+2. [github workflow](https://docs.github.com/en/actions/learn-github-action)
+
+3. [gnuplot_i docs](http://ndevilla.free.fr/gnuplot/gnuplot_i/index.html)
+
+4. [Unity docs](https://github.com/ThrowTheSwitch/Unity/tree/master/docs)
