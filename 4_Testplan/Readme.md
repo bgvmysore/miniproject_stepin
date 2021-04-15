@@ -5,7 +5,7 @@
 | Test ID | Description | Exp I/P | Exp O/P | Actual Out | Type of Test|
 |-|-|-|-|-|-|
 | HTP01 | Test to verify read from input data text file | Text File | Objects containing problem Info | PASS | Technical |
-| HTP02 | Test to verify solution of ODE solver | Objects containing problem Info | PASS | Technical |
+| HTP02 | Test to verify solution of ODE solver | Objects containing problem Info | Solution Data | PASS | Technical |
 | HTP03 | Test to verify output methods i.e, csv or plot | Solution Data | File or invoke a program | PASS | Requirement Based|
 
 ## Low Level Test Plan
