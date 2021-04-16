@@ -6,3 +6,4 @@
 6_ImagesAndVideos/*.drawio
 3_Implementation/test/*.exe
 3_Implementation/test/*.out
+3_Implementation/*.gcov

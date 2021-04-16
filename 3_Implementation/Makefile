@@ -42,4 +42,11 @@ cleantest:
 cleansol:
 	$(RM) soln.csv
 
+coverage: $(SRC) $(MAIN)
+	$(CC) -fprofile-arcs -ftest-coverage $(INC) $^ -o $(EXEC) $(LINK)
+	./$(EXEC) < ../7_Other/runtimeIp.txt
+	gcov -a main.c
+	$(RM) *.gcda
+	$(RM) *.gcno
+
 cleanall: clean cleantest cleansol
